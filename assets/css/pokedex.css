@@ -8,74 +8,101 @@
 
 .normal {
     background-color: #a6a877;
+    border: 2px solid #999966;
 }
 
 .grass {
     background-color: #77c850;
+    border: 2px solid #999966;
 }
 
 .fire {
     background-color: #ee7f30;
+    border: 2px solid #999966;
 }
 
 .water {
     background-color: #678fee;
+    border: 2px solid #999966;
 }
 
 .electric {
     background-color: #f7cf2e;
+    border: 2px solid #999966;
 }
 
 .ice {
     background-color: #98d5d7;
+    border: 2px solid #999966;
 }
 
 .ground {
     background-color: #dfbf69;
+    border: 2px solid #999966;
 }
 
 .flying {
     background-color: #a98ff0;
+    border: 2px solid #999966;
 }
 
 .poison {
     background-color: #a040a0;
+    border: 2px solid #999966;
 }
 
 .fighting {
     background-color: #bf3029;
+    border: 2px solid #999966;
 }
 
 .psychic {
     background-color: #f65687;
+    border: 2px solid #999966;
 }
 
 .dark {
     background-color: #725847;
+    border: 2px solid #999966;
 }
 
 .rock {
     background-color: #b8a137;
+    border: 2px solid #999966;
 }
 
 .bug {
     background-color: #a8b720;
+    border: 2px solid #999966;
 }
 
 .ghost {
     background-color: #6e5896;
+    border: 2px solid #999966;
 }
 
 .steel {
     background-color: #b9b7cf;
+    border: 2px solid #999966;
 }
 
 .dragon {
     background-color: #6f38f6;
+    border: 2px solid #999966;
 }
 
 .fairy {
     background-color: #f9aec7;
+    border: 2px solid #999966;
+}
+
+.pokemons {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
 .pokemon {
@@ -84,6 +111,13 @@
     margin: .5rem;
     padding: 1rem;
     border-radius: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra para cada Pokémon */
+    transition: transform 0.2s;
+}
+
+/* Efeito de hover para destacar o Pokémon quando o mouse passar por cima */
+.pokemon:hover {
+    transform: scale(1.05);
 }
 
 .pokemon .number {
@@ -127,6 +161,7 @@
     height: 70px;
 }
 
+/* Estilos para a paginação */
 .pagination {
     display: flex;
     flex-direction: row;

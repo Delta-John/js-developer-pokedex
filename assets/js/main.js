@@ -7,20 +7,24 @@ let offset = 0;
 
 function convertPokemonToLi(pokemon) {
     return `
-        <li class="pokemon ${pokemon.type}">
+        <li class="pokemon ${pokemon.types.join(' ')}">
             <span class="number">#${pokemon.number}</span>
             <span class="name">${pokemon.name}</span>
 
             <div class="detail">
+                <img src="${pokemon.photo}" alt="${pokemon.name}">
+                
                 <ol class="types">
                     ${pokemon.types.map((type) => `<li class="type ${type}">${type}</li>`).join('')}
                 </ol>
-
-                <img src="${pokemon.photo}"
-                     alt="${pokemon.name}">
+                
+                <div class="additional-info">
+                    <span class="height">Altura: ${pokemon.height} m</span>
+                    <span class="weight">Peso: ${pokemon.weight} kg</span>
+                </div>
             </div>
         </li>
-    `
+    `;
 }
 
 function loadPokemonItens(offset, limit) {
